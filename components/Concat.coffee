@@ -1,6 +1,6 @@
 noflo = require 'noflo'
 
-class Concat extends noflo.Component
+class ConCat extends noflo.Component
   description: "combine two strings using the string.concat method:\n output = input.concat(delimiter,addString)"
   constructor: ->
     @addString = ""
@@ -19,7 +19,7 @@ class Concat extends noflo.Component
     @outPorts = new noflo.OutPorts
       out:
         datatype: 'string'
-        
+
     @inPorts.delimiter.on 'data', (data) =>
       @delimiter = data
     @inPorts.addString.on 'data', (data) =>
@@ -29,4 +29,4 @@ class Concat extends noflo.Component
     @inPorts.in.on 'disconnect', =>
       @outPorts.out.disconnect()
 
-exports.getComponent = -> new Concat
+exports.getComponent = -> new ConCat
