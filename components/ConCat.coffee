@@ -10,7 +10,7 @@ class ConCat extends noflo.Component
       delimiter:
         datatype: 'string'
         description: 'String used to concatenate input strings'
-      addString:
+      addstring:
         datatype: 'string'
         description: 'first string'
       in:
@@ -22,10 +22,10 @@ class ConCat extends noflo.Component
 
     @inPorts.delimiter.on 'data', (data) =>
       @delimiter = data
-    @inPorts.addString.on 'data', (data) =>
+    @inPorts.addstring.on 'data', (data) =>
       @addString = data
     @inPorts.in.on 'data', (data) =>
-      @outPorts.out.send data.concat @delimiter, @addString
+      @outPorts.out.send data.concat @delimiter, @addstring
     @inPorts.in.on 'disconnect', =>
       @outPorts.out.disconnect()
 
