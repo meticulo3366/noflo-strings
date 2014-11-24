@@ -3,7 +3,7 @@ noflo = require 'noflo'
 class ConCat extends noflo.Component
   description: "combine two strings using the string.concat method:\n output = input.concat(delimiter,addString)"
   constructor: ->
-    @addString = ""
+    @addstring = ""
     @delimiter = "/"
 
     @inPorts = new noflo.InPorts
