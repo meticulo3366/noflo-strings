@@ -63,6 +63,7 @@
       "StringTemplate": "components/StringTemplate.coffee",
       "SubStr": "components/SubStr.coffee",
       "TemplateReplace": "components/TemplateReplace.coffee",
+      "ConCat":"components/ConCat.coffee",
       "ToString": "components/ToString.coffee"
     },
     "graphs": {
