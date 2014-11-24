@@ -23,7 +23,7 @@ class ConCat extends noflo.Component
     @inPorts.delimiter.on 'data', (data) =>
       @delimiter = data
     @inPorts.addstring.on 'data', (data) =>
-      @addString = data
+      @addstring = data
     @inPorts.in.on 'data', (data) =>
       @outPorts.out.send data.concat @delimiter, @addstring
     @inPorts.in.on 'disconnect', =>
